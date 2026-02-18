@@ -4,7 +4,7 @@ import { Question } from "../types";
 const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
 
 export const generateTheory = async (topicTitle: string): Promise<string> => {
-  const model = "gemini-3-flash-preview";
+  const model = "gemini-1.5-flash";
   const prompt = `
     Act as an expert English teacher. 
     Explain the topic "${topicTitle}" to a student.
