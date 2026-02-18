@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 2v7.31l-4.5 9A2 2 0 0 0 7.29 21h9.42a2 2 0 0 0 1.79-2.69L14 9.31V2h-4zm-1-2h6v2h-6V0z' fill='%23dbeafe' /%3E%3Cpath d='M14 8h.01' stroke='%232563eb' stroke-width='2' /%3E%3Cpath d='M21 5a3 3 0 0 0-3-3H6' stroke='none' /%3E%3Ccircle cx='18' cy='6' r='4' fill='%23ef4444' stroke='white' stroke-width='1' /%3E%3Cpath d='M16.5 6.5h3' stroke='white' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M17 9l-1 2 3-2' fill='%23ef4444' stroke='white' stroke-width='1'/%3E%3C/svg%3E" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valen's English Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Configuración de entorno simulada para navegador.
+      // REEMPLAZA LOS VALORES CON TUS DATOS DE FIREBASE CONSOLE
+      window.process = { 
+        env: { 
+          API_KEY: "AIzaSyC9jDo-V9m0NPvBqAdBze93x9D6RpZtioE", // Tu API Key de Gemini
+          FIREBASE_API_KEY: "AIzaSyBd6I-FKNpYYU0mjZt_2D_Ni3jxmiKjvEQ", // Tu apiKey de Firebase
+          FIREBASE_AUTH_DOMAIN: "valens-english-lab.firebaseapp.com", // Tu authDomain de Firebase
+          FIREBASE_PROJECT_ID: "valens-english-lab", // Tu projectId de Firebase
+          FIREBASE_STORAGE_BUCKET: "valens-english-lab.firebasestorage.app", // Tu storageBucket de Firebase
+          FIREBASE_MESSAGING_SENDER_ID: "400650249702", // Tu messagingSenderId de Firebase
+          FIREBASE_APP_ID: "1:400650249702:web:872bd3bd549b4da2a4e227" // Tu appId de Firebase
+        } 
+      };
+      
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#eff6ff',
+                100: '#dbeafe',
+                500: '#3b82f6',
+                600: '#2563eb',
+                700: '#1d4ed8',
+                900: '#1e3a8a',
+              }
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out',
+              'slide-in': 'slideIn 0.3s ease-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideIn: {
+                '0%': { transform: 'translateY(10px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.574.0",
+    "firebase/": "https://esm.sh/firebase@^12.9.0/",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.4"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased transition-colors duration-200">
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+  </body>
+</html>
